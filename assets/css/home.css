@@ -1,0 +1,89 @@
+.hero {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 5rem 0;
+}
+
+.hero .image-hero {
+  width: 75%;
+  justify-self: flex-end;
+  height: 210px;
+  order: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+.hero .image-hero img {
+  width: 100%;
+  height: auto;
+  margin-right: 0;
+}
+.video {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 16/9;
+  margin: 2rem auto;
+}
+@media only screen and (min-width: 600px) {
+  .hero {
+    grid-template-columns: 60% 40%;
+  }
+  .hero .text-section {
+    display: flex;
+    order: 0;
+    width: 370px;
+  }
+  .hero .image-hero {
+    display: flex;
+    height: 100%;
+    max-height: 100%;
+  }
+  .hero .image-hero img {
+    margin-right: 0px;
+    margin-left: -225px;
+  }
+}
+.control {
+  display: block;
+  margin-bottom: 1rem;
+  border: none;
+  border-bottom: 1px solid;
+  padding: 1rem 0;
+  width: 100%;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-bottom: 2rem;
+}
+.grid img {
+  width: 100%;
+  height: auto;
+}
+@media only screen and (min-width: 992px) {
+  body {
+    position: relative;
+  }
+
+  .hero .text-section {
+    order: 0;
+    display: grid;
+    height: 100%;
+    width: 100%;
+  }
+  .hero .image-hero {
+    order: 1;
+    height: 100%;
+    position: relative;
+  }
+  .hero .image-hero img {
+    margin-right: 100px;
+    margin-left: 0px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .image-hero {
+    position: relative;
+  }
+}
